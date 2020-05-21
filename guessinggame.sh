@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 filenum=$(ls | wc -l)
 
-function guess_filenum {
+function guess_num {
 	read guess
 	if [[ $guess -eq $filenum ]]
 	then
@@ -16,13 +16,13 @@ function guess_filenum {
 		if [[ $guess -gt $filenum ]]
 		then
 			echo "You have guessed more... try again with less number and press Enter :"
-			guess_filenum
+			guess_num
 		else
 			echo "You have guessed less... try again with greater number and press Enter :"
-			guess_filenum
+			guess_num
 		fi
 	fi
 }
-echo "Welcome to the guessing game!"
+echo "Welcome to the guessing game!!..Hope u like it."
 echo "Guess how many files are in the current directory and press Enter :"
-guess_filenum
+guess_num
