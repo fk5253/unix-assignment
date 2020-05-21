@@ -15,14 +15,14 @@ function guess_filenum {
 	else
 		if [[ $guess -gt $filenum ]]
 		then
-			echo "There is less... try again and press Enter :"
+			echo "You have guessed more... try again with less number and press Enter :"
 			guess_filenum
 		else
-			echo "There is more... try again and press Enter :"
+			echo "You have guessed less... try again with greater number and press Enter :"
 			guess_filenum
 		fi
 	fi
 }
 echo "Welcome to the guessing game!"
-echo "Guess how many files are in the current directory (pretend you don't know) and press Enter :"
+echo "Guess how many files are in the current directory and press Enter :"
 guess_filenum
